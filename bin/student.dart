@@ -31,7 +31,7 @@ class Student extends Person {
       'ID: $id, Name: $name, Adress: $adress, Phone: $phone,Email: $email, MapSubject: $mapEmptySubject');
 
   void addStudent({id, name, age, adress, phone}) {
-    mapEmptySubject.addEntries(Student(phone: phone,mapSubject: mapSubject));
+    mapEmptySubject.addEntries(Student(phone: phone, mapSubject: mapSubject));
   }
 
   @override
@@ -43,14 +43,13 @@ class Student extends Person {
   void removeStudent(String id) {
     mapSubject.removeWhere((student) => student.id == id);
   }
-  
+
   void printStudentData([String id]) {}
   void calculateStudentGrade(String id) {
-    mapSubject.forEach((key, value) {
+    /* mapSubject.forEach((key, value) {
       var student= Student();
       if(student.mapSubject)
-      print('Key, $key,Name, $name,') 
-     })
-
+      //print('Key, $key,Name, $name,') 
+     })*/
   }
 }
